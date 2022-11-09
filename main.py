@@ -1,3 +1,4 @@
+'''3
 sides=[3,2,4,7,5,12,11,13,15,16,14,14]
 
 sides=sorted(sides,reverse=True)
@@ -15,3 +16,27 @@ for i in range(len(sides)):
                 if s>smax:
                     smax=s
 print("Максимальная площадь треугольника",smax)
+'''
+
+import sys
+print("Введите коэффициент а:")
+a=int(input())
+print("Введите коэффициент b:")
+b=int(input())
+print("Введите коэффициент с:")
+c=int(input())
+
+if a==0:
+    print("Не является квадратным уравнением")
+    sys.exit()
+d=b**2-(4*a*c)
+
+if d<0:
+    print('Нет корней')
+elif d==0:
+    x0=-(b)/(2*a)
+    print ('1 корень: ',x0)
+elif d>0:
+    x1=(-b+(d**(1/2)))/(2*a)
+    x2 = (-b - (d ** (1 / 2))) / (2 * a)
+    print("2 корня: x1=",x1, "x2=", x2)
